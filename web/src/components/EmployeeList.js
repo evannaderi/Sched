@@ -11,7 +11,7 @@ const EmployeeList = ({ managerId, onDeleteEmployee }) => {
       const jwtToken = localStorage.getItem('token'); 
 
       try {
-        const response = await axios.get(`http://large.poosd-project.com/api/manager/${managerId}/employees`, {
+        const response = await axios.get(`http://localhost:3000/api/manager/${managerId}/employees`, {
           headers: {
             'Authorization': `Bearer ${jwtToken}`,
             'Content-Type': 'application/json'

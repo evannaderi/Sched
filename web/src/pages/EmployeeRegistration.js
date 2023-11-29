@@ -18,7 +18,7 @@ const EmployeeRegistration = () => {
   useEffect(() => {
     const fetchManagers = async () => {
       try {
-        const response = await axios.get('http://large.poosd-project.com/api/managers', {
+        const response = await axios.get('http://localhost:3000/api/managers', {
           headers: {
             'Authorization': `Bearer ${jwtToken}`,
             'Content-Type': 'application/json'

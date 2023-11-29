@@ -13,7 +13,7 @@ class APIService {
   APIService._internal(this.baseUrl); // Private constructor
 
   // Singleton instance
-  static final APIService _instance = APIService._internal('http://large.poosd-project.com/api');
+  static final APIService _instance = APIService._internal('http://localhost:3000/api');
 
   factory APIService() {
     return _instance;

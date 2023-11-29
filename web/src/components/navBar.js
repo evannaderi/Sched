@@ -95,7 +95,7 @@ const generateSchedules = async () => {
     const endDate = getEndOfWeek(new Date(today)); // End of this week
 
     const jwtToken = localStorage.getItem('token');
-    const response = await axios.post('http://large.poosd-project.com/api/schedule/generate', {
+    const response = await axios.post('http://localhost:3000/api/schedule/generate', {
       managerId,
       startDate,
       endDate
@@ -127,7 +127,7 @@ const deleteSchedule = async () => {
     const endDate = getEndOfWeek(new Date(today)); // End of this week
 
     const jwtToken = localStorage.getItem('token');
-    const response = await axios.post('http://large.poosd-project.com/api/manager/shifts/delete', {
+    const response = await axios.post('http://localhost:3000/api/manager/shifts/delete', {
       managerId,
       start: startDate,
       end: endDate

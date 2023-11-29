@@ -37,7 +37,7 @@ const Login = () => {
     event.preventDefault(); // Prevent the form from causing a page refresh
     // Call the API to send password reset email
     try {
-      const response = await fetch("http://large.poosd-project.com/api/request-password-reset", {
+      const response = await fetch("http://localhost:3000/api/request-password-reset", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

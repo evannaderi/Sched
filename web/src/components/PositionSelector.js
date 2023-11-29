@@ -12,7 +12,7 @@ const PositionSelector = ({ managerId, onPositionSelection }) => {
     if (managerId) {
       const jwtToken = localStorage.getItem('token');
       axios
-        .get(`http://large.poosd-project.com/api/positions/${managerId}`, {
+        .get(`http://localhost:3000/api/positions/${managerId}`, {
           headers: {
             'Content-Type': 'application/json',
             'Authorization': `Bearer ${jwtToken}`,

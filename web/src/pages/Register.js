@@ -151,7 +151,7 @@ const Register = () => {
     e.preventDefault();
     try {
       // Assuming your backend API endpoint for verifying the code is '/api/verify-email'
-      const response = await axios.get(`http://large.poosd-project.com/api/verify-email/${verificationCode}`);
+      const response = await axios.get(`http://localhost:3000/api/verify-email/${verificationCode}`);
       setVerificationStatus('Verification successful. You can now login.');
     } catch (error) {
       console.error('Error during email verification:', error);

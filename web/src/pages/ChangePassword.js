@@ -18,7 +18,7 @@ const ChangePassword = ({ employeeId }) => {
     }
 
     try {
-      await axios.put(`http://large.poosd-project.com/api/employees/change-password/${employeeId}`, { password: passwords.newPassword });
+      await axios.put(`http://localhost:3000/api/employees/change-password/${employeeId}`, { password: passwords.newPassword });
       
     } catch (error) {
       console.error('Error updating password', error);

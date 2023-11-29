@@ -170,7 +170,7 @@ export default class DemoApp extends React.Component {
         endDate: formattedEndDate
       };
 
-      const response = await axios.post(`http://large.poosd-project.com/api/shifts/managerbydates`, data, {
+      const response = await axios.post(`http://localhost:3000/api/shifts/managerbydates`, data, {
         headers: {
           Authorization: `Bearer ${jwtToken}`,
           contentType: 'application/json'
@@ -379,7 +379,7 @@ export default class DemoApp extends React.Component {
     if (this.state.selectedPositionId) {
       try {
         const jwtToken = localStorage.getItem('token');
-        const response = await axios.post('http://large.poosd-project.com/api/shift-templates', {
+        const response = await axios.post('http://localhost:3000/api/shift-templates', {
           dayOfWeek: getDayOfWeek(selectInfo.startStr), // convert startStr to day of week
           startTime: convertToStandardTime(selectInfo.startStr),
           endTime: convertToStandardTime(selectInfo.endStr),
@@ -505,7 +505,7 @@ function formatDateTimeForCalendar(dateTime) {
 
 async function getPositionTitle(positionId) {
   // Define the base URL
-  const baseUrl = 'http://large.poosd-project.com/api/position/';
+  const baseUrl = 'http://localhost:3000/api/position/';
 
   // Append the positionId to the URL
   const url = `${baseUrl}${positionId}`;
